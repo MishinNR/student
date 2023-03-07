@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+<!--Адрес /process_login указан как обработчик данных в Spring Security-->
+<form th:method="POST" th:action="@{/process_login}">
+    <div>
+        <label for="username">Введите логин: </label>
+        <input type="text" name="username" id="username"/>
+    </div>
+
+    <div>
+        <label for="password">Введите пароль: </label>
+        <input type="password" name="password" id="password"/>
+    </div>
+
+    <button type="submit">Войти</button>
+
+    <div th:if="${param.error}" style="color: red">
+        Неверный логин или пароль.
+    </div>
+</form>
+
+</body>
+</html>
