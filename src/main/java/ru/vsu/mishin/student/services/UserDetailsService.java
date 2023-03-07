@@ -10,7 +10,7 @@ import ru.vsu.mishin.student.security.UserDetails;
 import java.util.Optional;
 
 /**
- * Класс для загрузки пользователя из БД.
+ * Класс для загрузки информации о пользователе из БД.
  */
 @Service
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
